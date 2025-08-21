@@ -217,39 +217,58 @@ footer {
 
 /* Updated Responsive Styles for Mobile View */
 @media (max-width: 768px) {
+    /* General Mobile Styles */
     .container {
         padding: 0 15px;
     }
 
+    /* Header Mobile Styles */
+    header {
+        padding: 10px 0; /* Smaller header height */
+    }
+
     header .container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Keep elements in a row */
+        justify-content: space-between;
+        align-items: center;
     }
 
     .logo {
-        margin-bottom: 10px;
-        margin-right: 0;
+        font-size: 1.2em; /* Smaller logo font size */
+        margin: 0;
     }
-    
+
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Keep navigation horizontal */
         gap: 10px;
     }
 
+    .map-link, .login-link, .signup-button {
+        font-size: 0.8em; /* Smaller button text */
+        padding: 8px 12px; /* Smaller button padding */
+    }
+
+    /* Hero Section Mobile Styles */
+    .hero {
+        padding-top: 100px; /* Adds space to prevent content from hiding behind the fixed header */
+        padding-bottom: 50px;
+    }
+
     .hero .container {
-        flex-direction: column;
+        flex-direction: column; /* Stacks the elements vertically */
         text-align: center;
         gap: 30px;
     }
 
     .hero-content {
-        order: 1;
+        order: 1; /* Puts the text section first */
+        text-align: center;
     }
 
     .hero-image {
-        order: 2;
+        order: 2; /* Puts the images after the text */
         width: 100%;
-        min-height: 250px;
+        min-height: auto;
     }
 
     .hero-content h1 {
