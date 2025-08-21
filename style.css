@@ -215,6 +215,7 @@ footer {
     font-size: 0.9em;
 }
 
+/* Updated Responsive Styles for Mobile View */
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
@@ -226,13 +227,13 @@ footer {
     }
 
     .logo {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         margin-right: 0;
     }
-
+    
     nav ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .hero .container {
@@ -242,11 +243,11 @@ footer {
     }
 
     .hero-content {
-        order: 1; /* Puts text above the image on mobile */
+        order: 1;
     }
 
     .hero-image {
-        order: 2; /* Puts image below the text on mobile */
+        order: 2;
         width: 100%;
         min-height: 250px;
     }
