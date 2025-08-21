@@ -242,11 +242,11 @@ footer {
     }
 
     .hero-content {
-        order: 2; /* Puts text below the image on mobile */
+        order: 1; /* Puts text above the image on mobile */
     }
 
     .hero-image {
-        order: 1; /* Puts image above the text on mobile */
+        order: 2; /* Puts image below the text on mobile */
         width: 100%;
         min-height: 250px;
     }
