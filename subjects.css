@@ -67,3 +67,13 @@
 .custom-subject-link:hover {
     color: #0056b3;
 }
+
+@media (max-width: 768px) {
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subjects-subtitle {
+        font-size: 1em;
+    }
+}
