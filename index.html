@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="learning-approaches.css">
     <link rel="stylesheet" href="subjects.css">
+    <link rel="stylesheet" href="why-us.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 
 <body>
@@ -15,6 +17,9 @@
             <div class="logo">Learnaculous Learning Academy</div>
             <nav>
                 <ul>
+                    <li>
+                    <a href="https://maps.app.goo.gl/MZdYz969ze1GmwMv5" target="_blank" class="map-link">View on Maps</a>
+                </li>
                     <li><a href="#" class="login-link">Login</a></li>
                     <li><a href="#" class="signup-button">Sign Up</a></li>
                 </ul>
@@ -152,11 +157,73 @@
     </div>
 </section>
 
+    <section class="why-us">
+    <div class="container">
+        <h2>Why Choose Apex Coaching?</h2>
+        <p class="why-us-subtitle">
+            We're committed to your academic success with personalized attention, proven
+            methods, and a track record of excellence.
+        </p>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <h3>Expert Instructors</h3>
+                <p>Our team consists of qualified educators with years of teaching experience and subject matter expertise.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Proven Results</h3>
+                <p>95% of our students show significant improvement in their grades within the first 3 months of coaching.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Flexible Learning</h3>
+                <p>Choose from online or in-person sessions, with scheduling that fits your busy lifestyle.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Personalised Support</h3>
+                <p>From homework help to exam preparation, we provide complete academic support for all your needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Learnaculous Learning Academy. All rights reserved.</p>
         </div>
     </footer>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3>Schedule a Demo Session for your child</h3>
+       <form action="https://formspree.io/f/xqalrkdo" method="POST">
+    <div class="form-group">
+        <label for="parentName">Parent Name</label>
+        <input type="text" id="parentName" name="parentName" required>
+    </div>
+    <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" name="studentName" required>
+    </div>
+    <div class="form-group">
+        <label for="school">School</label>
+        <input type="text" id="school" name="school" required>
+    </div>
+    <div class="form-group">
+        <label for="grade">Grade</label>
+        <input type="text" id="grade" name="grade" required>
+    </div>
+    <div class="form-group">
+        <label for="subjects">Focus Subjects</label>
+        <input type="text" id="subjects" name="subjects" placeholder="e.g., Mathematics, Physics" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+    <button type="submit" class="submit-button">Submit</button>
+</form>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
