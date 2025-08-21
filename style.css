@@ -195,3 +195,54 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        order: 2; /* Puts text below the image on mobile */
+    }
+
+    .hero-image {
+        order: 1; /* Puts image above the text on mobile */
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .stats .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-item {
+        width: 100%;
+        text-align: center;
+    }
+}
