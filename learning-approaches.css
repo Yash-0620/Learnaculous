@@ -1,0 +1,126 @@
+/* Learning Approaches Section */
+.learning-approaches {
+    padding: 20px 0;
+    text-align: center;
+    background-image: url("images/bgcolor.png");
+}
+
+.learning-approaches h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.approach-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.approach-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: stretch; /* This ensures the cards stretch to the same height */
+}
+
+.approach-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.approach-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.approach-card p {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.approach-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    flex-grow: 1; /* This is a key change: it makes the list grow to fill space */
+}
+
+.approach-card ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Bullet points for each card */
+.tutoring ul li .bullet-point {
+    background-color: #4CAF50; /* Green color for tutoring */
+}
+
+.lectures ul li .bullet-point {
+    background-color: #9C27B0; /* Purple color for lectures */
+}
+
+.bullet-point {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.approach-button {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* This is a key change: pushes the button to the bottom */
+}
+
+.approach-button.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.approach-button.primary:hover {
+    background-color: #0056b3;
+}
+
+.approach-button.secondary {
+    background-color: #e0e0e0;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.approach-button.secondary:hover {
+    background-color: #d0d0d0;
+    color: #333;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+}
