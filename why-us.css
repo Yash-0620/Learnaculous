@@ -1,0 +1,59 @@
+/* Why Choose Apex Coaching Section */
+.why-us {
+    padding: 80px 0;
+    text-align: center;
+    background-image: url("images/bgcolor.png");
+}
+
+.why-us h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.why-us-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+}
+
+.reason-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.reason-card h3 {
+    font-size: 1.4em;
+    color: #3E2E5B;
+    margin: 0 0 10px 0;
+}
+
+.reason-card p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+}
