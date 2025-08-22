@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto 0 auto;
     padding: 0 80px;
 }
@@ -87,13 +87,14 @@ nav ul li a {
     background-color: #0056b3; /* Darker color on hover */
 }
 
+/* Hero section styles (for desktop and default) */
 .hero {
     background-image: url("images/bgcolor.png");
     padding: 80px 0;
 }
 
 .hero .container {
-    display: flex;
+    display: flex; /* Ensures elements are in a row by default */
     justify-content: space-between;
     align-items: center;
     gap: 40px;
@@ -105,7 +106,7 @@ nav ul li a {
 }
 
 .hero-content h1 {
-    font-size: 3em;
+    font-size: 3.2em;
     color: #3E2E5B;
     margin-bottom: 20px;
     line-height: 1.1;
@@ -140,22 +141,25 @@ nav ul li a {
     background-color: #0056b3;
 }
 
+/* Desktop / default */
 .hero-image {
-    flex: 0.3;
-    min-height: 250px;
-    shape: around;
-    background-color: #ccc;
-    border-radius: 160px;
-    /* This is a placeholder. You would replace this with an image */
-    background-size: fit;
-    background-position: top;
+  flex: 0.3;
+  display: flex;
+  flex-direction: row;      /* horizontal on desktop */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* Remove invalid props
+  shape: around;
+  background-size: fit;
+  */
 }
 
 .round-image-container {
 
   /* Set a fixed size for the container */
-  height: 200px;
-  width: 150px;
+  height: 250px;
+  width: 200px;
 
   /* Make the container a circle */
   border-radius: 30%;
@@ -164,7 +168,7 @@ nav ul li a {
   overflow: hidden;
 
   /* Optional: Add a subtle border or shadow for aesthetics */
-  border: 4px solid #fff;
+  border: 2px solid #007bff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -215,73 +219,123 @@ footer {
     font-size: 0.9em;
 }
 
-/* Updated Responsive Styles for Mobile View */
+/* Floating button for mobile */
+.floating-map-button {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+
+.floating-map-button:hover {
+    background-color: #0056b3;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* Mobile Responsive Styles (only applied on screen sizes less than 768px) */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+
 @media (max-width: 768px) {
     /* General Mobile Styles */
     .container {
         padding: 0 15px;
+        justify-content: center;
     }
 
     /* Header Mobile Styles */
     header {
-        padding: 10px 0; /* Smaller header height */
+        padding: 10px 0; /* Reduced padding for smaller height */
     }
 
     header .container {
-        flex-direction: row; /* Keep elements in a row */
+        flex-direction: row; /* Keeps elements in a row */
         justify-content: space-between;
         align-items: center;
     }
 
     .logo {
-        font-size: 1.2em; /* Smaller logo font size */
-        margin: 0;
+        font-size: 1.2em;
     }
 
     nav ul {
-        flex-direction: row; /* Keep navigation horizontal */
+        flex-direction: row;
         gap: 10px;
     }
 
-    .map-link, .login-link, .signup-button {
-        font-size: 0.8em; /* Smaller button text */
-        padding: 8px 12px; /* Smaller button padding */
+    /* Hiding the buttons from the header on mobile */
+    .map-link, .signup-button {
+        display: none;
+    }
+
+    .login-link {
+        font-size: 0.8em;
+        padding: 8px 12px;
     }
 
     /* Hero Section Mobile Styles */
-    .hero {
-        padding-top: 100px; /* Adds space to prevent content from hiding behind the fixed header */
-        padding-bottom: 50px;
-    }
+.hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
 
-    .hero .container {
-        flex-direction: column; /* Stacks the elements vertically */
-        text-align: center;
-        gap: 30px;
-    }
+.hero .container {
+    flex-direction: column; /* This is the key rule for stacking vertically */
+    text-align: center;
+    gap: 30px;
+}
 
-    .hero-content {
-        order: 1; /* Puts the text section first */
-        text-align: center;
-    }
+.hero-content {
+    order: 2; /* Puts the text section first */
+    text-align: center;
+}
 
-    .hero-image {
-        order: 2; /* Puts the images after the text */
-        width: 100%;
-        min-height: auto;
-    }
+.hero-image {
+    order: 1;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: row;       /* horizontal on mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;         /* keep them in one row */
+  }
 
-    .hero-content h1 {
-        font-size: 2em;
-    }
+.hero-content h1 {
+    font-size: 2em;
+}
+
+.round-image-container {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
 
     .stats .container {
         flex-direction: column;
-        gap: 20px;
+        justify-content: center;
     }
 
     .stat-item {
         width: 100%;
         text-align: center;
+        justify-content: center;
+    }
+
+    /* Show the floating button only on mobile */
+    .floating-map-button {
+        display: block;
     }
 }
