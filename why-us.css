@@ -7,21 +7,20 @@
 
 .why-us h2 {
     font-size: 2.5em;
-    color: #333;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #E6A700;
 }
 
 .why-us-subtitle {
     font-size: 1.1em;
-    color: #666;
+    color: #333;
     max-width: 800px;
     margin: 0 auto 50px;
 }
 
 .reasons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
     gap: 20px;
 }
 
@@ -55,5 +54,6 @@
 @media (max-width: 768px) {
     .reasons-grid {
         grid-template-columns: 1fr;
+        justify-content: center;
     }
 }
